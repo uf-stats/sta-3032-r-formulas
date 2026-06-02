@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="STA 3032 R Functions" />
+  <title>STA 3032 R Functions</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #1a1a1a;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #005fcc;
+      color: #fff;
+      padding: 8px 16px;
+      z-index: 100;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+
+    a:focus,
+    button:focus {
+      outline: 3px solid #005fcc;
+      outline-offset: 2px;
+    }
+
+    header {
+      background-color: #f5f5f5;
+      padding: 1rem 2rem;
+      border-bottom: 2px solid #ccc;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 1.5rem 2rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.875rem;
+      color: #555;
+      border-top: 1px solid #ccc;
+      margin-top: 2rem;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0.5rem 0 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    nav ul li a {
+      color: #005fcc;
+      text-decoration: none;
+    }
+
+    nav ul li a:hover,
+    nav ul li a:focus {
+      text-decoration: underline;
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-size: 1.75rem;
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      margin: 0.25rem 0 0 0;
+      font-weight: normal;
+      color: #444;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 0.25rem;
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Skip link for keyboard and screen reader users -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+ <header role="banner">
+    <h1>STA 3032 Formula Sheet</h1>
+    <h2>R Functions</h2>
+    <nav aria-label="Formula sections">
+      <ul>
+        <li><a href="#module1">Module 1</a></li>
+        <li><a href="#module2">Module 2</a></li>
+        <li><a href="#module3-4">Module 3 and 4</a></li>
+        <li><a href="#module5">Module 5</a></li>
+        <li><a href="#module6">Module 6</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content" role="main">
+
+    <!-- Module 1 -->
+    <section id="module1" aria-labelledby="module1-heading">
+      <h3 id="module1-heading">Module 1: Summary and Descriptive Statistics</h3>
+
+      <p><code>num1</code> and <code>num2</code> represent two vectors of data</p>
+<ul>
+<li><code>mean(num1, trim=0.05)</code> where (0.05 means 5% trim)</li>
+<li><code>quantile(num1,0.25,type=6)</code> where (0.25 means 25<sup>th</sup> percentile)</li>
+<li><code>IQR(num1, type=6)</code></li>
+<li><code>var(num1)</code></li>
+<li><code>sd(num1)</code></li>
+<li><code>cor(num1,num2)</code></li></ul>
+    </section>
+
+
+
+    <!-- Module 2 -->
+    <section id="module2" aria-labelledby="module2-heading">
+      <h3 id="module2-heading">Module 2: Probability and Random Variables</h3>
+
+      <p>Couting</p>
+<ul>
+<li><code>factorial(x)</code></li>
+<li><code>choose(n, x)</code></li>
+</ul>
+<p>Discrete Distributions</p>
+<ul>
+<li>Binomial<ul>
+    <li><code>dbinom(x, size, prob)</code></li>
+    <li><code>pbinom(x, size, prob)</code></li>
+    <li><code>qbinom(p, size, prob)</code></li>
+    <li><code>x = </code> number of successes, <code>size = </code> number of trials, <code>prob = </code> probability of success on each trial, <code>p = </code> given probability</li>
+</ul></li>
+<li>Negative Binomial<ul>
+    <li><code>dnbinom(x, size, prob)</code></li>
+    <li><code>pnbinom(x, size, prob)</code></li>
+    <li><code>qnbinom(p, size, prob)</code></li>
+    <li><code>x = </code> number of failures, <code>size = </code> target number of successes, <code>prob = </code> probability of success on each trial, <code>p = </code> given probability</li>
+</ul></li>
+<li>Poisson<ul>
+    <li><code>dpois(x, lambda)</code></li>
+    <li><code>ppois(x, lambda)</code></li>
+    <li><code>qpois(p, lambda)</code></li>
+    <li><code>x = </code> number of occurrences, <code>lambda = </code> fixed rate, usually per unit of time</li>
+</ul></li>
+</ul>
+<p>Continuous Distributions</p>
+<ul>
+<li>Uniform<ul>
+    <li><code>punif(x, a, b)</code></li>
+    <li><code>qunif(p, a, b)</code></li>
+    <li><code>x = </code> random variable value, <code>a = </code> lower boundary point, <code>b = </code> upper boundary point, <code>p = </code> given probability</li>
+</ul></li>
+<li>Normal<ul>
+    <li><code>pnorm(x, mu, sigma)</code></li>
+    <li><code>qnorm(p, mu, sigma)</code></li>
+    <li><code>x = </code> random variable value, <code>mu = </code> mean, <code>sigma = </code> standard deviation, <code>p = </code> given probability</li>
+</ul></li>
+<li>Chi-Square<ul>
+    <li><code>pchisq(x, df)</code></li>
+    <li><code>qchisq(p, df)</code></li>
+    <li><code>x = </code> random variable value, <code>df = </code> degrees of freedom, <code>p = </code> given probability</li>
+</ul></li>
+<li>t-Distribution<ul>
+    <li><code>pt(x, df)</code></li>
+    <li><code>qt(p, df)</code></li>
+    <li><code>x = </code> random variable value, <code>df = </code> degrees of freedom, <code>p = </code> given probability</li>
+</ul></li>
+<li>F-Distribution<ul>
+    <li><code>pf(x, df1, df2)</code></li>
+    <li><code>qf(p, df1, df2)</code></li>
+    <li><code>x = </code> random variable value, <code>df1 = </code> degrees of freedom, <code>df2 = </code> degrees of freedom, <code>p = </code> given probability</li>
+</ul></li>
+</ul>
+    </section>
+
+
+    <!-- Modules 3 and 4-->
+    <section id="module3-4" aria-labelledby="module3-4-heading">
+      <h3 id="module3-4-heading">Modules 3 and 4: Inference for One and Two Populations</h3>
+<p>Inference for Population Means (one or two samples)</p>
+<ul><li><code>t.test(x, y = NULL, alternative="two.sided", mu = 0, paired = FALSE, var.equal = FALSE, conf.level = 0.95)</code><ul>
+    <li><code>x = </code>vector of data values</li>
+    <li><code>y = </code>optional vector of data values (two sample only)</li>
+    <li><code>alternative = </code>string specifying alternative (<code>"two.sided"</code>, <code>"greater"</code>, <code>"less"</code>)</li>
+    <li><code>mu = </code> null value mean</li>
+    <li><code>paired = TRUE</code> if paired data (two sample only)</li>
+    <li><code>var.equal = TRUE</code> if assume equal variances (two sample only)</li>
+    <li><code>conf.level = </code> confidence level as a decimal (enter 0.95 for 95%)</li>
+</ul></li></ul>
+<p>Inference for Population Proportion (one sample only)</p>
+<ul><li><code>binom.confint(x, n, conf.level = 0.95, methods = "all")</code><ul>
+    <li>Need to load <code>"binom"</code> package</li>
+    <li><code>x = </code>number of successes in the binomial experiment</li>
+    <li><code>n = </code>number of trials in the binomial experiment</li>
+    <li><code>conf.level = </code> confidence level as a decimal (enter 0.95 for 95%)</li>
+    <li><code>methods = </code> methods used to construct interval(default is <code>"all"</code>, <code>"ac"</code> provides Agresti-Coull)</li>
+</ul></li></ul>
+<p>Inference for Population Variances (one or two samples)</p>
+<ul><li><code>varTest{library(EnvStats)}(x, y = NULL, alternative = "two.sided", sigma.squared = 1, conf.level = 0.95)</code><ul>
+    <li><code>x = </code>vector of data values</li>
+    <li><code>y = </code>optional vector of data values (two sample only)</li>
+    <li><code>alternative = </code>string specifying alternative (<code>"two.sided"</code>, <code>"greater"</code>, <code>"less"</code>)</li>
+    <li><code>sigma.squared = </code> null value variance</li>
+    <li><code>conf.level = </code> confidence level as a decimal (enter 0.95 for 95%)</li>
+</ul></li></ul>
+<p>Sign Test (one sample only)</p>
+<ul><li><code>eqnpar(x, p = 0.5, type = 6, ci = TRUE, ci.method = "exact", ci.type = "two-sided", approx.conf.level = 0.95)</code><ul>
+    <li>Need to load <code>"EnvStats"</code> package</li>
+    <li><code>x = </code>vector of data values</li>
+    <li><code>p = </code>percentile as a decimal (enter 0.5 for 50th percentile)</li>
+    <li><code>type = </code>calculation method, use <code>type = 6</code> for this class</li>
+    <li><code>ci = FALSE</code> means do not compute confidence interval</li>
+    <li><code>ci.method = </code>method to computing confidence interval, use <code>ci.method = "exact"</code> for this class</li>
+    <li><code>ci.type = </code>string specifying type (<code>"two-sided"</code>, <code>"lower"</code>, <code>"upper"</code>)</li>
+    <li><code>approx.conf.level = </code> confidence level as a decimal (enter 0.95 for 95%)</li>
+</ul></li></ul>
+<p>Wilcoxon Signed-rank Test (one or two samples)</p>
+<ul><li><code>wilcox.test(x, y = NULL, mu = 0, paired = FALSE, alternative = "two.sided", conf.int = TRUE, conf.level = 0.95)</code><ul>
+    <li><code>x = </code>vector of data values</li>
+    <li><code>y = </code>optional vector of data values (two sample only)</li>
+    <li><code>mu = </code> null value mean</li>
+    <li><code>paired = TRUE</code> if paired data (two sample only)</li>
+    <li><code>alternative = </code>string specifying alternative (<code>"two.sided"</code>, <code>"greater"</code>, <code>"less"</code>)</li>
+    <li><code>conf.int = FALSE</code> means do not compute confidence interval</li>
+    <li><code>conf.level = </code> confidence level as a decimal (enter 0.95 for 95%)</li>
+</ul></li></ul>
+<p>Chi-Square Test (two samples only)</p>
+<ul><li><code>chisq.test(x)</code><ul>
+    <li><code>x = </code>matrix of data values</li>
+</ul></li></ul>
+
+    </section>
+
+
+
+    <!-- Module 5 -->
+    <section id="module5" aria-labelledby="module5-heading">
+      <h3 id="module5-heading">Module 5: Linear Regression</h3>
+<p>Simple Linear Regression Model</p>
+<ul><li><code>reg = lm(y ~ x, data = myData)</code><ul>
+    <li><code>y = </code>dependent (outcome/response) variable</li>
+    <li><code>x = </code>independent (predictor) variable</li>
+    <li><code>data = </code>data frame that includes columns of <code>y</code> and <code>x</code></li>
+</ul>
+</ul>
+<p>Multiple Linear Regression Model</p>
+<ul><li><code>reg = lm(y ~ x1 + x2 + x3, data = myData)</code><ul>
+    <li><code>y = </code>dependent (outcome/response) variable</li>
+    <li><code>x1 = </code>first independent (predictor) variable</li>
+    <li><code>x2 = </code>second independent (predictor) variable</li>
+    <li><code>x3 = </code>third independent (predictor) variable (if necessary)</li>
+    <li><code>data = </code>data frame that includes columns of <code>y</code>, <code>x1</code>, <code>x2</code>, etc</li>
+</ul>
+</ul>
+
+<p>Inference for Linear Regression</p>
+<ul><li><code>summary(reg)</code></li>
+<li><code>anova(reg)</code></li>
+
+    <li><code>confint(reg, level = 0.95)</code><ul>
+    <li><code>reg = </code> linear regression model</li>
+    <li><code>level = </code>confidence level as a decimal (enter 0.95 for 95%)</li>
+</ul>
+<li><code>predict.lm(reg, newdata = data.frame(x = Predictor), interval = "confidence", level=0.95)</code></li><ul>
+    <li><code>reg = </code> linear regression model</li>
+    <li><code>newdata = </code>data frame of values of predictor, <code>x</code>. If multiple predictors, they must be entered separately (for example <code>x1 = x1.data, x2 = x2.data</code>)</li>
+    <li><code>interval = </code>string specifying whether a confidence interval (<code>"confidence"</code>) or a prediction interval (<code>"prediction"</code>)</li>
+    <li><code>level = </code>confidence level as a decimal (enter 0.95 for 95%)</li>
+</ul>
+</ul>
+<p>Box-Cox</p>
+<ul><li><code>bc = powerTransform(y ~ x, data = myData)</code><ul>
+    <li><code>y = </code>dependent (outcome/response) variable</li>
+    <li><code>x = </code>independent (predictor) variable</li>
+    <li><code>data = </code>data frame that includes columns of <code>y</code> and <code>x</code></li>
+</ul></li>
+<li><code>summary(bc)</code></li></ul>
+
+
+
+    </section>
+
+
+
+    <!-- Module 6 -->
+    <section id="module6" aria-labelledby="module6-heading">
+      <h3 id="module6-heading">Module 6: Analysis of Variance</h3>
+
+<p>Fitting and Inference:</p>
+<ul><li><code>reg = aov(y ~ x, data = myData)</code><ul>
+    <li><code>y = </code>dependent (outcome/response) variable</li>
+    <li><code>x = </code>independent (predictor) variable</li>
+    <li><code>data = </code>data frame that includes columns of <code>y</code> and <code>x</code></li>
+</ul>
+<li><code>reg = aov(y ~ x + block, data = myData)</code><ul>
+    <li><code>y = </code>dependent (outcome/response) variable</li>
+    <li><code>x = </code>independent (predictor) variable</li>
+    <li><code>block = </code>block variable</li>
+    <li><code>data = </code>data frame that includes columns of <code>y</code>, <code>x</code>, and <code>block</code></li>
+</ul>
+<li><code>summary(reg)</code></li>
+<li><code>anova(reg)</code></li>
+</ul>
+<p>Multiple Compairsons</p>
+<ul><li><code>TukeyHSD(reg)</code></li>
+</ul>
+
+
+
+
+  </main>
+
+  <footer role="contentinfo">
+    <p>2026 STA 3032 Formula Sheet. For accessibility concerns, contact your instructor.</p>
+  </footer>
+
+</body>
+</html>
