@@ -239,43 +239,43 @@
     <section id="module5" aria-labelledby="module5-heading">
       <h3 id="module5-heading">Module 5: Linear Regression</h3>
 <p>Simple Linear Regression Model</p>
-<ul><li><code>reg = lm(y ~ x, data = myData)</code></li><ul>
+<ul><li><code>reg = lm(y ~ x, data = myData)</code><ul>
     <li><code>y = </code>dependent (outcome/response) variable</li>
     <li><code>x = </code>independent (predictor) variable</li>
     <li><code>data = </code>data frame that includes columns of <code>y</code> and <code>x</code></li>
-</ul>
+</ul></li>
 </ul>
 <p>Multiple Linear Regression Model</p>
-<ul><li><code>reg = lm(y ~ x1 + x2 + x3, data = myData)</code></li><ul>
+<ul><li><code>reg = lm(y ~ x1 + x2 + x3, data = myData)</code><ul>
     <li><code>y = </code>dependent (outcome/response) variable</li>
     <li><code>x1 = </code>first independent (predictor) variable</li>
     <li><code>x2 = </code>second independent (predictor) variable</li>
     <li><code>x3 = </code>third independent (predictor) variable (if necessary)</li>
     <li><code>data = </code>data frame that includes columns of <code>y</code>, <code>x1</code>, <code>x2</code>, etc</li>
-</ul>
+</ul></li>
 </ul>
 
 <p>Inference for Linear Regression</p>
 <ul><li><code>summary(reg)</code></li>
 <li><code>anova(reg)</code></li>
 
-    <li><code>confint(reg, level = 0.95)</code></li><ul>
+    <li><code>confint(reg, level = 0.95)</code><ul>
     <li><code>reg = </code> linear regression model</li>
     <li><code>level = </code>confidence level as a decimal (enter 0.95 for 95%)</li>
-</ul>
-<li><code>predict.lm(reg, newdata = data.frame(x = Predictor), interval = "confidence", level=0.95)</code></li><ul>
+</ul></li>
+<li><code>predict.lm(reg, newdata = data.frame(x = Predictor), interval = "confidence", level=0.95)</code><ul>
     <li><code>reg = </code> linear regression model</li>
     <li><code>newdata = </code>data frame of values of predictor, <code>x</code>. If multiple predictors, they must be entered separately (for example <code>x1 = x1.data, x2 = x2.data</code>)</li>
     <li><code>interval = </code>string specifying whether a confidence interval (<code>"confidence"</code>) or a prediction interval (<code>"prediction"</code>)</li>
     <li><code>level = </code>confidence level as a decimal (enter 0.95 for 95%)</li>
-</ul>
+</ul></li>
 </ul>
 <p>Box-Cox</p>
-<ul><li><code>bc = powerTransform(y ~ x, data = myData)</code></li><ul>
+<ul><li><code>bc = powerTransform(y ~ x, data = myData)</code><ul>
     <li><code>y = </code>dependent (outcome/response) variable</li>
     <li><code>x = </code>independent (predictor) variable</li>
     <li><code>data = </code>data frame that includes columns of <code>y</code> and <code>x</code></li>
-</ul>
+</ul></li>
 <li><code>summary(bc)</code></li></ul>
 
 
