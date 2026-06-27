@@ -130,19 +130,25 @@
     <li><code>dbinom(x, size, prob)</code></li>
     <li><code>pbinom(x, size, prob)</code></li>
     <li><code>qbinom(p, size, prob)</code></li>
-    <li><code>x = </code> number of successes, <code>size = </code> number of trials, <code>prob = </code> probability of success on each trial, <code>p = </code> given probability</li>
+    <li><code>x = </code> number of successes, <code>size = </code> number of trials, <code>prob = </code> probability of success on each trial, <code>p = </code> percentile (as a decimal)</li>
+</ul></li>
+<li>Geometric<ul>
+    <li><code>dgeom(x, prob)</code></li>
+    <li><code>pgeom(x, prob)</code></li>
+    <li><code>qgeom(p, prob)</code></li>
+    <li><code>x = </code> number of failures, <code>prob = </code> probability of success on each trial, <code>p = </code> percentile (as a decimal)</li>
 </ul></li>
 <li>Negative Binomial<ul>
     <li><code>dnbinom(x, size, prob)</code></li>
     <li><code>pnbinom(x, size, prob)</code></li>
     <li><code>qnbinom(p, size, prob)</code></li>
-    <li><code>x = </code> number of failures, <code>size = </code> target number of successes, <code>prob = </code> probability of success on each trial, <code>p = </code> given probability</li>
+    <li><code>x = </code> number of failures, <code>size = </code> target number of successes, <code>prob = </code> probability of success on each trial, <code>p = </code> percentile (as a decimal)</li>
 </ul></li>
 <li>Poisson<ul>
     <li><code>dpois(x, lambda)</code></li>
     <li><code>ppois(x, lambda)</code></li>
     <li><code>qpois(p, lambda)</code></li>
-    <li><code>x = </code> number of occurrences, <code>lambda = </code> fixed rate, usually per unit of time</li>
+    <li><code>x = </code> number of occurrences, <code>lambda = </code> fixed rate, usually per unit of time, <code>p = </code> percentile (as a decimal)</li>
 </ul></li>
 </ul>
 <p>Continuous Distributions</p>
@@ -150,27 +156,27 @@
 <li>Uniform<ul>
     <li><code>punif(x, a, b)</code></li>
     <li><code>qunif(p, a, b)</code></li>
-    <li><code>x = </code> random variable value, <code>a = </code> lower boundary point, <code>b = </code> upper boundary point, <code>p = </code> given probability</li>
+    <li><code>x = </code> random variable value, <code>a = </code> lower boundary point, <code>b = </code> upper boundary point, <code>p = </code> percentile (as a decimal)</li>
 </ul></li>
 <li>Normal<ul>
     <li><code>pnorm(x, mu, sigma)</code></li>
     <li><code>qnorm(p, mu, sigma)</code></li>
-    <li><code>x = </code> random variable value, <code>mu = </code> mean, <code>sigma = </code> standard deviation, <code>p = </code> given probability</li>
+    <li><code>x = </code> random variable value, <code>mu = </code> mean, <code>sigma = </code> standard deviation, <code>p = </code> percentile (as a decimal)</li>
 </ul></li>
 <li>Chi-Square<ul>
     <li><code>pchisq(x, df)</code></li>
     <li><code>qchisq(p, df)</code></li>
-    <li><code>x = </code> random variable value, <code>df = </code> degrees of freedom, <code>p = </code> given probability</li>
+    <li><code>x = </code> random variable value, <code>df = </code> degrees of freedom, <code>p = </code> percentile (as a decimal)</li>
 </ul></li>
 <li>t-Distribution<ul>
     <li><code>pt(x, df)</code></li>
     <li><code>qt(p, df)</code></li>
-    <li><code>x = </code> random variable value, <code>df = </code> degrees of freedom, <code>p = </code> given probability</li>
+    <li><code>x = </code> random variable value, <code>df = </code> degrees of freedom, <code>p = </code> percentile (as a decimal)</li>
 </ul></li>
 <li>F-Distribution<ul>
     <li><code>pf(x, df1, df2)</code></li>
     <li><code>qf(p, df1, df2)</code></li>
-    <li><code>x = </code> random variable value, <code>df1 = </code> degrees of freedom, <code>df2 = </code> degrees of freedom, <code>p = </code> given probability</li>
+    <li><code>x = </code> random variable value, <code>df1 = </code> degrees of freedom, <code>df2 = </code> degrees of freedom, <code>p = </code> percentile (as a decimal)</li>
 </ul></li>
 </ul>
     </section>
